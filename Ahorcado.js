@@ -39,10 +39,10 @@ button.addEventListener('click',()=>{
      alert('Ya has usado esta letra. Intenta con otra.');
         return;
     }
-    etrasUsadas.push(letra); 
+    letrasUsadas.push(letra); 
 
     /* condición de ganador o perdedor */
-    if(haFallado){
+     if(haFallado){
        contadorFallos++;
        document.querySelector('#ahorcado').style.backgroundPosition= -(180*contadorFallos)+'px 0px'; 
        if(contadorFallos>2){
@@ -50,8 +50,14 @@ button.addEventListener('click',()=>{
        }
        if(contadorFallos>=5){
         document.querySelector('#resultado').innerHTML="¡Eres un Loser!";
-        document.getElementById('resultado').style.backgroundColor="#740707";
+        document.getElementById('resultado').style.backgroundColor="rgba(141, 125, 125, 0.7)";
         document.getElementById('resultado').style.color = "#ffffff";
+    
+        document.getElementById('resultado').style.width = "30em";
+        document.getElementById('resultado').style.height = "5em";
+        document.getElementById('resultado').style.display = "flex";
+        document.getElementById('resultado').style.alignItems = "center";
+        document.getElementById('resultado').style.justifyContent = "center";
 
         
         button.disabled=true;
@@ -59,8 +65,14 @@ button.addEventListener('click',()=>{
     }else{
         if(palabraConGuiones.indexOf('_')<0){
             document.querySelector('#resultado').innerHTML="¡¡Has Ganado!!";
-            document.getElementById('resultado').style.backgroundColor="#0f8117";
+            document.getElementById('resultado').style.backgroundColor="rgba(141, 125, 125, 0.7)";
             document.getElementById('resultado').style.color = "#ffffff";
+        
+            document.getElementById('resultado').style.width = "30em";
+            document.getElementById('resultado').style.height = "5em";
+            document.getElementById('resultado').style.display = "flex";
+            document.getElementById('resultado').style.alignItems = "center";
+            document.getElementById('resultado').style.justifyContent = "center";
             button.disabled=true;
         }
     }
