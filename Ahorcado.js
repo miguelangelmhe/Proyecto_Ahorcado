@@ -14,6 +14,7 @@ const palabra= palabras[Math.floor(Math.random()*palabras.length)];
 let palabraConGuiones = palabra.replace(/./g,"_ ");
 
 let contadorFallos=0;
+let letrasUsadas = [];
 
 //<p> id output sera reemplazado por "palabraConGuiones"
 document.querySelector('#output').innerHTML = palabraConGuiones;
@@ -22,6 +23,9 @@ button.addEventListener('click',()=>{
     //obtener el valor de la letra ingresada en id letra y guardarlo en la const letra.
     let letra=document.querySelector('#letra').value;
     letra=letra.toLowerCase();
+        // Limpiar el cajón de entrada de letras
+        document.querySelector('#letra').value = '';
+
     let haFallado=true;
     for(const i in palabra){
         //si encuentra la letra, reemplazara el guión+espacio por la letra que encontro en el espacio en que lo encontro.
@@ -30,6 +34,12 @@ button.addEventListener('click',()=>{
             haFallado=false;
         }
     }
+    //verificar si la letra está usada
+    if (letrasUsadas.includes(letra)) {
+     alert('Ya has usado esta letra. Intenta con otra.');
+        return;
+    }
+    etrasUsadas.push(letra); 
 
     /* condición de ganador o perdedor */
     if(haFallado){
@@ -61,5 +71,7 @@ button.addEventListener('click',()=>{
     
     /* reemplazar los datos de id output por la variable palabra con guiones */
     document.querySelector('#output').innerHTML=palabraConGuiones;
+    document.querySelector('#letrasUsadas').innerHTML = `Letras usadas: ${letrasUsadas.join(', ')}`;
+    
     
 });
