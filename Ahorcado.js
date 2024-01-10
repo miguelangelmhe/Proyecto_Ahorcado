@@ -5,12 +5,12 @@ String.prototype.replaceAt=function(index, character)
 
 //conjunto de palabras para el juego
 const button=document.querySelector('#calcular');//asignando button a boton calcular
-const palabras=['casa','perro','maestro','codigo'];
+const palabras=['hackaboss','bootcamp','tecnologia','artificial','inteligencia','imagenes','metodo','programacion','array','random','contador'];
 
-//palabra randon
+//palabra random
 const palabra= palabras[Math.floor(Math.random()*palabras.length)];
 
-//remplazar las palbras por guion y espacio
+//remplazar las palabras por guion y espacio
 let palabraConGuiones = palabra.replace(/./g,"_ ");
 
 let contadorFallos=0;
