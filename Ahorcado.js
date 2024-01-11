@@ -5,7 +5,7 @@ String.prototype.replaceAt=function(index, character)
 
 //conjunto de palabras para el juego
 const button=document.querySelector('#calcular');//asignando button a boton calcular
-const palabras=['hackaboss','bootcamp','tecnologia','artificial','inteligencia','imagenes','metodo','programacion','array','random','contador'];
+const palabras=['hackaboss','bootcamp','tecnologia','artificial','inteligencia','imagen','metodo','programacion','array','random','cascada','lenguaje','estudio','variable','funcion','ciclo','condicion','objeto','clase','parametro','argumento','if','else','for','while','switch','break','continue','return','debugger']
 
 //palabra random
 const palabra= palabras[Math.floor(Math.random()*palabras.length)];
