@@ -43,7 +43,7 @@ String.prototype.replaceAt = function (index, character) {
       contadorFallos++;
   
       // Compara fallos con imagenes para colgar el muñeco
-      document.querySelector('#ahorcado').style.backgroundImage = `url('/fallo${contadorFallos}.png')`;
+      document.querySelector('#ahorcado').style.backgroundImage = `url('./fallo${contadorFallos}.png')`;
       
       // Muestra imagenes de ahorcado a partir del primer error
       if (contadorFallos === 1) {

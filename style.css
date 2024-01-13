@@ -19,7 +19,7 @@ h1{
     height: 200px;
     width: 200px;
     left: 0;
-    background-image: url("../fallo0.png");
+    background-image: url("./fallo0.png");
     border-radius: 2em;
     margin-top: 2em;
     
