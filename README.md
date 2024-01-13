@@ -22,7 +22,7 @@ El usuario tiene 6 intentos para completar la palabra. Si no lo hace dentro de l
 
 Si el usuario responde correctamente el juego termina y muestra un mensaje de ganador.
 
-Una vez terminado el juego pulsar el botón reiniciar para empezar de nuevo.
+Una vez terminado el juego pulsar el botón volver a jugar para empezar de nuevo.
  
 2. Tecnologías
 Lista de tecnologías usados en el proyecto:
