@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url("../black.jpg");
+    background-image: url("./black.jpg");
     font-family: sans-serif;
     display: flex;
     justify-content: center;
