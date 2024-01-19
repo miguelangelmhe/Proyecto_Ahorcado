@@ -23,11 +23,15 @@ String.prototype.replaceAt = function (index, character) {
     document.querySelector('#letra').value = '';
     
   //verificar si la letra está usada
-    if (letrasUsadas.includes(letra)) {
-      alert('Ya has usado esta letra. Intenta con otra.');
-      return;
-    }
-    letrasUsadas.push(letra.toLowerCase());
+  if (letrasUsadas.includes(letra)) {
+    // Actualiza el mensaje de repetición
+    document.querySelector('#mensajeRepetido').innerHTML = 'Ya has usado esta letra. Intenta con otra.';
+    return;
+  } else {
+    // Limpia el mensaje de repetición si no se repite
+    document.querySelector('#mensajeRepetido').innerHTML = '';
+  }
+  letrasUsadas.push(letra.toLowerCase());
   
     let haFallado = true;
     for (const i in palabra) {
